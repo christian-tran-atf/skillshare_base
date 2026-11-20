@@ -11,7 +11,10 @@ A **contribution review** is a fan-out/fan-in: one **source subagent** per repos
 |---|---|
 | `repos` | **Mandatory.** List of repository URLs. A wiki is a repository of its own (`….wiki`, `…/-/wikis/…`). Each entry may carry `local=<path>`: an up-to-date clone for code reading. |
 | `start`, `end` | **Mandatory.** `YYYY-MM-DD`, both inclusive, evaluated in UTC. |
-| `lenses` | Optional. Badges or frameworks for the mapping, e.g. `ML Engineer L1`. Absent → facts-only reports. |
+| `lenses` | Optional. Badges or skills for the mapping, by their 2026 grid name, e.g. `ML & Agentic Engineer L1`, `Analytics Engineer L1`, `Delivery & project execution L1` (a legacy `Technical Project Lead` request is mapped to that skill, see `career-badge-mapping`). Absent → facts-only reports. |
+| `grade` | Optional. The person's grade (e.g. `J2`); sets whether the guide expects an output or an outcome. |
+| `context` | Optional. Facts the person supplies (roles and seniority of colleagues, who wrote what, AI-assistant use). Reports label them *stated by the person*; they never raise a rating on their own. |
+| `supplied_files` | Optional. Local exports to cross-check figures (billing CSV, metrics, the previous badge dossier). Read-only; children recompute the quoted figures and say which reproduce. |
 | `claims` | Optional. Statements to test against the evidence (see `references/objectivity-rules.md`). |
 | `aliases` | Optional. Extra emails or names the person commits under. |
 | `language` | Optional. Report language. Default English; quotes stay verbatim. |
@@ -42,7 +45,9 @@ A report is accepted when all of these hold:
 - every section of `references/report-template.md` is present;
 - the header's `Completeness` field is not `INCOMPLETE`;
 - three or more cited items, picked at random, match `evidence.json` (id, date, role, numbers);
-- every metric in the text appears in the evidence or is flagged as computed with its formula.
+- every metric in the text appears in the evidence or is flagged as computed with its formula;
+- the collection date is compared with the window end (a window still open at collection time is stated in the header), and commits reached through a remote that is not the repository itself are excluded (see the adapter's attribution notes);
+- when `supplied_files` are given, the cost or volume figures quoted for the claims were recomputed from them.
 
 A failed report goes back to its child with the specific mismatch (resume that child); it is never patched here.
 

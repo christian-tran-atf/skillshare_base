@@ -1,54 +1,36 @@
 ---
 name: artefact-career-badges
-description: Reference for the Artefact Software Engineering Career System (v2025) and SE Technical & Growth Badges Skill Grid (2025). Use when evaluating contributions for semestrial performance reviews, choosing which expertise or growth badges to target, or preparing Artefact badge evaluation dossiers.
+description: Reference for Artefact's Software Engineering career guide (2026) and evaluation grid (2026): ladder and points, badges, output versus outcome, dossier limits, evaluation process. Use when evaluating contributions for the semestrial performance review, choosing which expertise badges or cross-cutting skills to target, or preparing Artefact badge dossiers. For line-by-line evidence mapping use career-badge-mapping.
 ---
 
-# Artefact SE Career System & Technical Badges (v2025)
+# Artefact SE career guide and evaluation grid (2026)
 
-Ground badge candidacy assessments and performance-review evidence mapping in Artefact's Software Engineering Chapter rules without forcing contributions into rigid checkbox templates.
+Ground badge candidacy assessments and performance-review evidence in the SE Chapter rules without forcing contributions into rigid checkbox templates. Sources read 2026-11-20: *SE Career guide 2026.pdf* ("Guide évaluation, Oct 2026") and *SE Evaluation Grid 2026 - [FR] Soft. Eng Badges.pdf*. Exact grid wording: [`references/skill-grid-2026.md`](references/skill-grid-2026.md). The previous 2025 summary is in `references/legacy/` (superseded). The line-by-line mapping procedure and rubrics are in the `career-badge-mapping` skill; the per-skill grid files and the 2025-to-2026 change log live there too (`references/grid/_changes-2026-vs-2025.md`).
 
-Read [`references/skill-grid-2025.md`](references/skill-grid-2025.md) for the exact per-level definitions, expectations, reach, and illustrative examples across all 8 badges.
+## 1. Career system mechanics (2026)
 
-## 1. Career System Mechanics (v2025)
+- **Cadence**: evaluations every six months, **December and June**. Reviewer selection (2-4 reviewers incl. the N+1), self/peer reviews, counsellor review, evaluation committee.
+- **Ladder** (points → grade): J1 0 · J2 10 · J3 20 · S1 30 · S2 45 · S3 60 · M1 80 · M2 100 · M3 120 · D1/Pr1 150. Titles: Junior SE (J0-J3), Senior SE (S1-S3), Lead SE (M1-M3), then Director SE (generalist) or Principal engineer (expert), Partner, Managing Partner. *(Note: slide 14 contains a legacy typo stating J1 = 5 pts while slide 5's ladder sets J1 = 0 pts.)*
+- **Promotion**: intergrade (J2 to J3) needs points; grade change (J3 to S1) needs points **and** soft requirements (Client Development, People Management, Project Management, Communication, Business sense, Technical Conviction, assessed by self, peer and counsellor reviews). Bonus: at most 2 pts, an advance on future badges.
+- **Badges**: points per level L1 4 · L2 10 · L3 16 · L4 28.
+  - **Expertise badges (5)**: `Software Developer`, `Site Security & Reliability Engineer (SSRE)`, `Architect` (grid: *Cloud Architect*), `Machine Learning Engineer` (2026 grid: *ML & Agentic Engineer*), `Analytics Engineer`.
+  - **Growth badges (3, guide p.8)**: `Technical Project Lead` (2025 grid: *Project Tech Lead*), `Pre-Sales Engineer`, `Engineering Manager`.
+  - **2026 Grid structure & TPL/Growth gap**: The 2026 grid PDF exports **Levels 1-3 only**, omits the 3 Growth badge tables, and adds **3 pink-banded cross-cutting skills** (`Communication`, `Business sense`, `Delivery & project execution`). When evaluating a Growth badge such as `Technical Project Lead`, rate it against two labelled line sets and report coverage for each: (a) the legacy 2025 *Project Tech Lead* lines (`references/legacy/skill-grid-2025.md`; the only wording specific to the badge) and (b) the 2026 cross-cutting lines (`Delivery & project execution` + `Communication`, plus `Business sense` where framing/MVP/ROI applies), as in `career-badge-mapping`, flagging for counsellor confirmation whether Growth badges are still awarded as 4/10/16-pt badges or folded into soft requirements.
+- **Level meaning** (guide p.9): L1 delivers well under supervision, technical team, chapter; L2 self-reliant and supervisor, technical and business team, chapter; L3 shares best practices, client management, tech community; L4 evangelist, client direction, growth tribe and outside.
+- **Output versus outcome** (guide p.5): an *output* is what was built; an *outcome* is a result with a measurable positive impact for Artefact across three scopes: **Project delivery**, **Chapter SE**, or **Client development**.
+  - **Junior (J0-J3)**: Outcome expected on *Project delivery* | Output sufficient on *Chapter SE* | N/A on *Client development*.
+  - **Senior (S1-S3)**: Outcome on *Project delivery* & *Chapter SE* | Output on *Client development*.
+  - **Lead (M1-M3)**: Outcome on all three.
+- **Dossier** (guide p.10): **one single combined dossier** covers all badges requested in the evaluation cycle (note: older template headers said one file per badge; guide p.10 states *"un seul dossier de badge pour tous les badges demandés"*). Max **2 pages per project** (diagrams/charts excluded) and **max 3 relevant projects**. Verdicts: Strong "Yes" (~30%, awarded without oral), Oral (~60%: 20 min for L1, 30 min for L2+, with ≥2 leads), Strong "No" (~10%, counsellor should discourage premature requests). Past dossiers are typically written in French.
 
-### Tracks & Ladder
-- **Cadence**: Assessed twice a year (S1 / S2) via 360 reviews and badge dossiers presented by the counselor to the evaluation committee.
-- **Role stages & points**:
-  - **Software Engineer** (Learn & participate — variable evaluated on internal contributions): **L1** (6 pts), **L2** (14 pts), **L3** (20 pts).
-  - **Senior Software Engineer** (Convince & coach — owner of delivery, client tech PoC, mentor for juniors; variable 50/50 internal & client impact): **L4** (30 pts), **L5** (45 pts), **L6** (60 pts).
-  - **Lead Software Engineer / Technical Expert** (Pave the way): **L7** (80 pts), **L8** (95 pts).
-  - **Engineering Director / Principal Engineer** (Lead the way): **L9** (110 pts), **L10** (130 pts), **L11** (150 pts).
+## 2. How the committee evaluates a badge (non-dogmatic mapping rules)
 
-### Badge Families & Points per Level
-Every badge grants points according to the highest validated level on that badge:
-- **Level 1**: 4 pts | **Level 2**: 10 pts | **Level 3**: 16 pts | **Level 4**: 28 pts
+Each grid skill has four rows per level: **Expectations**, **Reach**, **Output Examples**, **Outcome Examples**.
 
-| Family | Badges |
-|---|---|
-| **Expertise Badges (5)** | `Software Developer`, `Architect (Cloud)`, `Machine Learning Engineer` *(shared with DS)*, `Analytics Engineer` *(shared with DA)*, `Site Security & Reliability Engineer (SSRE)` |
-| **Growth Badges (3)** | `Technical Project Lead` (*Project Tech Lead*), `Pre-Sales Engineer`, `Engineering Manager` |
-
-### Universal Meaning of Mastery Levels
-
-| Level | Expectations | Client Reach | Artefact Reach | Transversal Anchors (People / Knowledge / Design / Delivery / Problem Solving) |
-|---|---|---|---|---|
-| **Level 1** | Delivers well under supervision / autonomous on well-defined tasks | Technical team | Chapter | Delivers tested & documented assets on time, provides visibility, knowledgeable on own sub-systems, fixes bugs on own sub-system. |
-| **Level 2** | Self-reliant and supervisor | Technical & business team | Chapter | Fully autonomous across stack/topic, frames approach/docs/testing strategy, sizes tasks & boosts velocity, solves issues quickly, helps juniors progress. |
-| **Level 3** | Shares best practices | Client management | Tech community | Defines project/company roadmap & architecture convictions, upskills confirmed engineers/DS/DA, solves complex cross-system issues. |
-| **Level 4** | Evangelist | Client direction (C-level) | Growth tribe & outside | Sets Artefact standards, represents Artefact externally, advises C-level. |
-
-## 2. How the Committee Evaluates a Badge (Non-Dogmatic Mapping Rules)
-
-Each badge level in the Skill Grid has four sections: **Definition / Expectations**, **Reach**, **Output Examples**, and **Outcome Examples**.
-
-1. **Illustrative, never exhaustive**: Page 10 of the Career System explicitly states that *Examples* are a *"non-exhaustive list of facts that are linked to completing this milestone, one doesn't need to tick all the boxes to reach the milestone."*
-2. **Do not force-fit**:
-   - Map a contribution based on **underlying engineering competency, autonomy, and reach** (e.g., an LLM/RAG document ingestion, chunking, vector search, retrieval evaluation, or inference/ingestion cost optimization pipeline legitimately demonstrates *ML Engineer* production GenAI/LLMOps skills even if the grid's older examples name `MLflow` or `scikit-learn`).
-   - Similarly, Snowflake SQL modeling, `dbt` transformations, data quality/integrity guards, lineage, and analytical views demonstrate *Analytics Engineer* skills even if implemented inside an AI product repository rather than a standalone BI project.
-   - Conversely, if core expectations of a badge are absent (e.g., targeting *Project Tech Lead L1* with strong backlog/ticket breakdown and code reviews, while lacking evidence on agile ceremony facilitation or reporting-chain visibility), **call out both the strengths and the exact gap** so the candidate can verify whether non-Git evidence (meetings, Slack/Teams, scratchpads, tech lead feedback) fills it.
-3. **Dossier constraints (Artefact Tips & Tricks)**:
-   - One separate dossier per requested badge.
-   - Concise synthesis: **max 2 pages per project** (excluding diagrams/charts) and **max 3 relevant projects**.
-   - High-value proof points: architecture diagrams, concrete metrics (ROI, cost reduction, latency, reliability, team productivity/velocity), what failed & how the engineer pivoted, and verifiable links (`!MR`, `#Issue`, ADR, Wiki).
-4. **Out-of-window continuity**:
-   - Semestrial reviews focus on the current semester's window, **except** when a multi-semester mission or tech lead explicitly validates referencing an earlier foundational stream on the same mission/badge that has not yet been credited for that specific badge (e.g. a first-time *ML Engineer L1* request building on ~1 year of GenAI product delivery). Always label pre-window evidence clearly by date so temporal boundaries stay transparent.
+1. **Illustrative, never exhaustive**: the examples are a non-exhaustive list of facts linked to the milestone; one does not need to tick all the boxes.
+2. **Do not force-fit.**
+   - Map a contribution on the underlying engineering competency, autonomy and reach (an LLM/RAG ingestion, chunking, vector search, retrieval evaluation or inference-cost optimisation pipeline can show *ML & Agentic Engineer* skills even if the grid's examples name `MLflow` or `scikit-learn`; Snowflake SQL modelling, `dbt`, data-quality guards and lineage show *Analytics Engineer* skills even inside an AI product repository).
+   - If core expectations are absent (e.g. strong backlog breakdown and code reviews but no agile ceremonies or reporting-chain visibility under *Delivery & project execution*), **call out both the strengths and the exact gap** so the person can check whether non-Git evidence (meetings, chat, scratchpads, tech lead feedback) fills it.
+3. **Dossier content** that carries weight: architecture diagrams, concrete metrics (ROI, cost, latency, reliability, team productivity), what failed and how the engineer pivoted, verifiable links (`!MR`, `#issue`, ADR, wiki). Cost figures must be reproducible from a billing export; withdrawn or superseded figures must not be quoted.
+4. **Out-of-window continuity**: a semestrial review is about the semester window, except when the mission lead validates referencing an earlier foundational stream not yet credited for that badge. Label pre-window evidence by date, and check the previous dossier so the same work is not credited twice.
+5. **Grade context**: the grade (e.g. J2) sets whether an output suffices or an outcome is expected (section 1).

@@ -14,7 +14,8 @@ Read and follow this template strictly when reporting contributions for a single
 3. **Neutral engineering prose**:
    - Write factual statements: *"<Action> on <subsystem> (<artifact>), <observable effect>."*
    - Do **not** flatter (*"masterfully", "crucial", "impressive", "spearheaded"*) and do **not** downplay (*"only a small fix", "just config"*).
-   - Quote quantitative figures (cost, latency, test counts, data volume) **only** when present in the repository text, diffs, comments, or wiki pages, citing the exact source.
+   - Quote quantitative figures (cost, latency, test counts, data volume) **only** when present in the repository text, diffs, comments, wiki pages, or supplied exports, citing the exact source. If a later commit/wiki/issue corrects or withdraws an earlier figure, mark the earlier figure `[SUPERSEDED]` and report the reconciled number.
+   - Distinguish **Output** (artifact delivered) from **Outcome** (measurable impact on *Project delivery*, *Chapter SE*, or *Client development* per the 2026 SE Career Guide p.5).
 4. **Window discipline**: Only count artifacts with activity by the target user inside `[start_date, end_date]` in the primary inventory. If an older artifact (or a post-window follow-up) is essential to understand an in-window item, label it explicitly as `[OUTSIDE WINDOW: YYYY-MM-DD]`.
 5. **Non-forced badge signals**: Tag an item with a candidate badge/dimension **only** when there is a clear technical link. Leave routine chores untagged rather than stretching them to fit a grid example.
 
@@ -76,14 +77,14 @@ Highlight substantive reviews (architecture, correctness, data integrity, SQL/Sn
 - **`<path or wiki slug>` — <Title>** (`created` | `updated`, commits: `<sha1>, ...`, `YYYY-MM-DD`, <url>)
   - **Substance**: Technical content authored by the user (verified via `git log -p` / `git show` so edits to others' pages only credit the user's diff), including architecture diagrams, cost/benchmark analyses, runbooks, or onboarding guides.
 
-## 7. Career & Badge Signal Mapping (Evidence-Only)
-*(Include only when `career_context` was supplied in the brief.)*
-For each target badge:
-### <Badge Name — Target Level>
-- **Relevant Evidence from this Repo**:
-  - `<Artifact ID>`: <How this concrete engineering work relates to the role's definition, autonomy, technical depth, or reach — without forcing exact Skill Grid example phrasing>.
-- **Thin / Missing Signals in this Repo**:
-  - <Aspects of this badge/level that do NOT appear in this repository (neutral observation, not a failure — another repo may cover them)>.
+## 7. Career & Badge Signal Mapping (Evidence-Only, 2026 Evaluation Grid)
+*(Include only when `career_context` was supplied in the brief. Use 2026 grid names — e.g. `ML & Agentic Engineer`, `Analytics Engineer`, and for legacy `Technical Project Lead` map both to 2026 `Delivery & project execution` + `Communication` and secondary 2025 `Project Tech Lead`.)*
+For each target badge / skill:
+### <Badge / Skill Name — Target Level>
+- **Relevant Evidence from this Repo (`OUTPUT` vs `OUTCOME` + scope)**:
+  - `<Artifact ID>` (`OUTPUT` | `OUTCOME — Project delivery / Chapter SE / Client development`): <How this concrete engineering work relates to the 2026 role's definition, expectations, autonomy, technical depth, or reach — without forcing exact Evaluation Grid example phrasing>.
+- **Thin / Missing Signals & Counter-Evidence in this Repo**:
+  - <Aspects of this badge/level that do NOT appear in this repository, or caveats such as unshipped side branches, skipped quality gates, or unresolved review threads>.
 
 ## 8. Uncertainties & Verification Notes
 - Any API pagination limits hit, inaccessible endpoints, ambiguous co-authorship, or `[OUTSIDE WINDOW]` context referenced.

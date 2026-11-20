@@ -1,6 +1,8 @@
 # Analytics Engineer
 
-> Source: *SE Skill Grid 2025 - Soft. Eng Tech Badges* (H1 2025 refresh), extracted from the PDF. Level 1..4 = 4/10/16/28 points. Examples are non-exhaustive: nobody ticks every box. Wrapped lines inside *Outcome Examples* cells may be merged into one bullet by the extraction.
+> Kind: expertise (shared with Data Analysts)
+
+> Source: *SE Evaluation Grid 2026 - [FR] Soft. Eng Badges.pdf* (the sheet header still reads "H1 2025 skills updates (rewording & refresh)"). **Only Levels 1-3 appear in the 2026 grid**; the 2026 career guide still states four badge levels (4/10/16/28 pts). Level 4 lines of the 2025 grid, where they existed, are in `../legacy-2025/grid/analytics-engineer.md`. Examples are non-exhaustive: nobody ticks every box. Each bullet is one line of a grid cell (the 2025 extraction merged some wrapped Outcome lines).
 
 ### Expectations
 
@@ -23,12 +25,6 @@
 - I am in contact with data owners to define data specifications
 - I have convictions around datagov tools on the market
 
-**Level 4**
-- I am in contact with the growth tribe to define best practices to deploy for our clients
-- I participate in demonstrating Artefact's competencies in data management
-- I engage with Heads Of at various clients to showcase the value of projects done at Artefact and how we can implement them in their organizations
-- I am one of the technical referent in Analytics Engineering at Artefact
-
 ### Reach
 
 **Level 1**
@@ -40,10 +36,7 @@
 **Level 3**
 - Client business and tech management
 
-**Level 4**
-- Client head of data / CDO / CTO or equivalent. Expertise partnerships.
-
-### Output Examples
+### Output examples
 
 **Level 1**
 - I wrote complex queries and document them to explain the business logic behind.
@@ -70,16 +63,13 @@
 - I deploy datagov tool in production
 - I upskilled the team working with me (DE/DS/DA, artefact and client).
 
-**Level 4**
-- I helped defining data gouvernance strategy at company level
-- I advocated for data gouvernance at the clients
-- I monitored data gouvernance trends to help Artefact grow
-- I wrote tech articles on emerging technologies
-
-### Outcome Examples
+### Outcome examples
 
 **Level 1**
-- Created 5 dbt models in 2 weeks Identified 15 inconsistencies in source data Corrected 3 bugs in a data pipeline in 1 week People onboarded don't have a hard time understanding my transformations & the data used
+- Created 5 dbt models in 2 weeks
+- Identified 15 inconsistencies in source data
+- Corrected 3 bugs in a data pipeline in 1 week
+- People onboarded don't have a hard time understanding my transformations & the data used
 
 **Level 2**
 - Successfully optimized an SQL query, reducing its execution time by 50%.
@@ -88,7 +78,7 @@
 - Junior fully autonomous on the tool used in 2 months
 
 **Level 3**
-- Implemented a data strategy that enabled the development of 5 data use cases Reduced time to market of UC by 20% Increased adoption & usage of data products The client trusts me to lead any analytics engineering subject.
-
-**Level 4**
-- People come to see me when struggling with advanced analytics engineering sujects Published articles about Analytics Engineering I've presented Artefact case studies to 2 Heads Of from different companies, resulting in 3 new pilot projects with a combined value of €100,000 I've designed and implemented a data quality management solution for a client, reducing reporting errors by 98% and saving €2 million in potential non-compliance costs.
+- Implemented a data strategy that enabled the development of 5 data use cases
+- Reduced time to market of UC by 20%
+- Increased adoption & usage of data products
+- The client trusts me to lead any analytics engineering subject.

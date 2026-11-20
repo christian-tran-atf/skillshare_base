@@ -1,6 +1,8 @@
 # Site Security & Reliability Engineer (SSRE)
 
-> Source: *SE Skill Grid 2025 - Soft. Eng Tech Badges* (H1 2025 refresh), extracted from the PDF. Level 1..4 = 4/10/16/28 points. Examples are non-exhaustive: nobody ticks every box. Wrapped lines inside *Outcome Examples* cells may be merged into one bullet by the extraction.
+> Kind: expertise
+
+> Source: *SE Evaluation Grid 2026 - [FR] Soft. Eng Badges.pdf* (the sheet header still reads "H1 2025 skills updates (rewording & refresh)"). **Only Levels 1-3 appear in the 2026 grid**; the 2026 career guide still states four badge levels (4/10/16/28 pts). Level 4 lines of the 2025 grid, where they existed, are in `../legacy-2025/grid/ssre.md`. Examples are non-exhaustive: nobody ticks every box. Each bullet is one line of a grid cell (the 2025 extraction merged some wrapped Outcome lines).
 
 ### Expectations
 
@@ -26,14 +28,6 @@
 - I have advanced knowledge of system architecture, security, and reliability engineering, security architecture, risk management, and compliance.
 - I drive strategic reliability and security initiatives.
 
-**Level 4**
-- I define and drive the overall SSRE strategy.
-- I lead large-scale projects and initiatives.
-- I serve as a subject matter expert and advisor.
-- I have expert-level knowledge of system reliability, security, and architecture.
-- I have a proven track record of leading large-scale projects.
-- I have strong strategic thinking and decision-making skills.
-
 ### Reach
 
 **Level 1**
@@ -45,10 +39,7 @@
 **Level 3**
 - Influence across multiple teams and projects
 
-**Level 4**
-- Organization-wide influence and leadership
-
-### Output Examples
+### Output examples
 
 **Level 1**
 - I resolved minor incidents
@@ -72,13 +63,7 @@
 - I managed a project to migrate systems to a new platform.
 - I am knowledgeable on latest security news and trends.
 
-**Level 4**
-- Defined the long-term strategy for system reliability.
-- Led a major initiative to improve system architecture.
-- Published thought leadership on SSRE practices.
-- Created articles/presented talks regarding SRE
-
-### Outcome Examples
+### Outcome examples
 
 **Level 1**
 - Reduced the frequency of minor service disruptions.
@@ -94,7 +79,3 @@
 - Improved the team's incident response efficiency and reduced downtime.
 - Increased security awareness and reduced security vulnerabilities.
 - Successfully transitioned to a more scalable and reliable platform.
-
-**Level 4**
-- Company is now viewed as a leader in SRE practices.
-- Attracted and developed top SRE talents.

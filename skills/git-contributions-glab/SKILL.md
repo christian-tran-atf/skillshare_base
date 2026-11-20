@@ -52,6 +52,10 @@ If a local checkout exists, also inspect `git -C <local_path> log --all --format
    - **Always use** `glab api --hostname <host> '<endpoint>' --paginate --output ndjson | jq -s '...'` so multi-page results parse cleanly into one array.
 5. **`-f` / `-F` defaults `glab api` to `POST`**:
    - For `GET` endpoints, either inline query parameters in the endpoint string or pass `-X GET` explicitly.
+6. **Self-managed GitLab (`gitlab-si` / CE 18.x) ignored-filter & secondary-remote traps**:
+   - `GET /projects/:id/events?user=<username>` **ignores** the `user=` parameter on GitLab 18.x and returns all project members' events. Always filter the returned NDJSON strictly by `select(.author_id == <user_id> or .author_username == "<username>")` or cross-check `GET /users/<user_id>/events`.
+   - `GET /projects/:id/merge_requests?approved_by_ids[]=<user_id>` **ignores** the array filter on some GitLab CE versions and returns all updated MRs. Always verify non-self approvals via GraphQL `project.mergeRequests(approvedBy: ["<username>"])`, per-MR `/merge_requests/<iid>/approvals`, or `action_name == "approved"` events.
+   - Local checkouts may contain secondary remotes pointing to *other* repositories (e.g. a template or CI components repo). Never use `git log --all` blindly — restrict commit enumeration to the remote whose URL matches `<project_path>` (typically `origin/*`), and separate default-branch (`origin/develop` or `origin/main`) merges from unshipped side/smoke-test branches.
 
 ## 4. Exhaustive Discovery Workflow — `code_repo`
 

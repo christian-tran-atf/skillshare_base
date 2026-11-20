@@ -1,6 +1,8 @@
 # Cloud Architect
 
-> Source: *SE Skill Grid 2025 - Soft. Eng Tech Badges* (H1 2025 refresh), extracted from the PDF. Level 1..4 = 4/10/16/28 points. Examples are non-exhaustive: nobody ticks every box. Wrapped lines inside *Outcome Examples* cells may be merged into one bullet by the extraction.
+> Kind: expertise (the career guide calls it Architect)
+
+> Source: *SE Evaluation Grid 2026 - [FR] Soft. Eng Badges.pdf* (the sheet header still reads "H1 2025 skills updates (rewording & refresh)"). **Only Levels 1-3 appear in the 2026 grid**; the 2026 career guide still states four badge levels (4/10/16/28 pts). Level 4 lines of the 2025 grid, where they existed, are in `../legacy-2025/grid/cloud-architect.md`. Examples are non-exhaustive: nobody ticks every box. Each bullet is one line of a grid cell (the 2025 extraction merged some wrapped Outcome lines).
 
 ### Expectations
 
@@ -27,13 +29,6 @@
 - I have strong leadership and project management skills.
 - I drive strategic cloud initiatives (platform vision).
 
-**Level 4**
-- I define and drive the overall enterprise architecture strategy.
-- I lead large-scale cloud projects and initiatives.
-- I serve as a subject matter expert and advisor.
-- I have expert-level knowledge of cloud architecture, security, and compliance.
-- I have strong strategic thinking and decision-making skills.
-
 ### Reach
 
 **Level 1**
@@ -45,10 +40,7 @@
 **Level 3**
 - Influence across multiple teams and projects
 
-**Level 4**
-- Organization-wide influence and leadership
-
-### Output Examples
+### Output examples
 
 **Level 1**
 - I successfully deployed small-scale cloud solutions.
@@ -72,15 +64,7 @@
 - I conducted cloud training and knowledge sharing sessions.
 - I managed cloud projects and ensured timely delivery.
 
-**Level 4**
-- I successfully implemented organization-wide cloud strategies.
-- I developed long-term cloud strategy and roadmap.
-- I led research and development of innovative cloud solutions.
-- I advised senior management on cloud-related decisions.
-- I participated in industry events and conferences.
-- I contributed to open-source cloud projects.
-
-### Outcome Examples
+### Outcome examples
 
 **Level 1**
 - Enhanced client's understanding of basic cloud concepts.
@@ -100,11 +84,3 @@
 - Enabled smooth and successful cloud migrations.
 - Enhanced cloud knowledge and skills across the organization.
 - Delivered cloud projects on time and within budget.
-
-**Level 4**
-- Future leaders in cloud architecture trained.
-- Drove innovation and adoption of cutting-edge cloud technologies.
-- Influenced strategic technology decisions.
-- Positioned the organization as a leader in cloud expertise.
-- Gave back to the cloud community and fostered collaboration.
-- Created a track record of leading large-scale cloud projects.

@@ -64,3 +64,5 @@ Project IDs are in `evidence.json` (`project.id`). With a local clone, prefer gi
 - **`changes_count`** is capped by GitLab (`"1000+"`); line counts in the report come from the person's own commits.
 - **Wiki pages** carry history in git only; page authorship = `git log` on the wiki repository.
 - **Bots** (renovate, pipelines, GitLab itself) show as authors in lists: they are never counted as the person.
+- **Foreign remotes in a clone**: the collector counts commits only from local branches and from the remotes that point at the repository itself; remotes pointing at other projects (e.g. a stray `glab-base` remote) are ignored and named in `evidence.limits`. If a commit still seems to belong to another repository, check `git branch -a --contains <sha>` and say so in the report.
+- **Blame and squash merges**: `git blame` and squash/promotion merges (`dev -> preprod -> prod`) credit the person who merged, not the one who wrote the lines; never use blame totals as authorship. Use the commit list of the branch and, when the person states that a colleague wrote a module, report both.

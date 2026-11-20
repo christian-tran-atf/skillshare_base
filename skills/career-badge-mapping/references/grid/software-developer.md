@@ -1,6 +1,8 @@
 # Software Developer
 
-> Source: *SE Skill Grid 2025 - Soft. Eng Tech Badges* (H1 2025 refresh), extracted from the PDF. Level 1..4 = 4/10/16/28 points. Examples are non-exhaustive: nobody ticks every box. Wrapped lines inside *Outcome Examples* cells may be merged into one bullet by the extraction.
+> Kind: expertise
+
+> Source: *SE Evaluation Grid 2026 - [FR] Soft. Eng Badges.pdf* (the sheet header still reads "H1 2025 skills updates (rewording & refresh)"). **Only Levels 1-3 appear in the 2026 grid**; the 2026 career guide still states four badge levels (4/10/16/28 pts). Level 4 lines of the 2025 grid, where they existed, are in `../legacy-2025/grid/software-developer.md`. Examples are non-exhaustive: nobody ticks every box. Each bullet is one line of a grid cell (the 2025 extraction merged some wrapped Outcome lines).
 
 ### Expectations
 
@@ -17,12 +19,6 @@
 - I define implementation best practices at project level and share them internally to the software engineering team at Artefact.
 - I have the right intuitions on how to tackle any kind of matter.
 
-**Level 4**
-- I am an expert, with not only intuitions but deep knowlege and understanding on how the tools I use work.
-- I can dive deeply into hard concepts to investigate security or performance issues.
-- I am up to date on the modern and new features and designs that come out.
-- I master code readbility.
-
 ### Reach
 
 **Level 1**
@@ -36,11 +32,7 @@
 **Level 3**
 - Client tech lead Multi-system level (backend+front+data and organizing the split and interactions)
 
-**Level 4**
-- Client head of engineer or equivalent.
-- Deep expertise, under the hood expert.
-
-### Output Examples
+### Output examples
 
 **Level 1**
 - I added API endpoints to a service.
@@ -61,11 +53,7 @@
 - I upskilled the team working with me (DE/DS/DA, artefact and client).
 - I designed complex but simple multi-system solutions.
 
-**Level 4**
-- I shares articles internally.
-- I understand the underlying functionning mechanism of the tools I use.
-
-### Outcome Examples
+### Outcome examples
 
 **Level 1**
 - My senior does not have a hard time reviewing my PR.
@@ -81,6 +69,3 @@
 - Complicated & critical software engineering topic tackled efficiently & pushed to production.
 - The client trusts me to lead any subject.
 - Improved velocity & synergies in the project
-
-**Level 4**
-- I am a go-to guy for any challenging and hopeless software engineering matter.

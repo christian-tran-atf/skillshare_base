@@ -126,18 +126,23 @@ class Identity:
         return bool(u) and u.get("id") == self.user["id"]
 
 
-def remote_matches(local, host, path):
-    """True if any remote of `local` points exactly at host/path (no prefix matches: foo vs foo.wiki)."""
+def matching_remotes(local, host, path):
+    """Names of the remotes of `local` that point exactly at host/path (no prefix matches: foo vs foo.wiki)."""
     want = f"{host}/{path}".lower()
+    names = []
     for ln in run(["git", "-C", local, "remote", "-v"]).stdout.splitlines():
         parts = ln.split()
         if len(parts) < 2:
             continue
         url = re.sub(r"^(https?://|ssh://)?([^@/]+@)?", "", parts[1].lower()).replace(":", "/", 1) if "://" not in parts[1] \
             else re.sub(r"^(https?|ssh)://([^@/]+@)?", "", parts[1].lower())
-        if re.sub(r"\.git$", "", url.rstrip("/")) == want:
-            return True
-    return False
+        if re.sub(r"\.git$", "", url.rstrip("/")) == want and parts[0] not in names:
+            names.append(parts[0])
+    return names
+
+
+def remote_matches(local, host, path):
+    return bool(matching_remotes(local, host, path))
 
 
 # ---------------------------------------------------------------- commits
@@ -148,7 +153,15 @@ def commits_local(local, host, path, start, end, ident):
     f = run(["git", "-C", local, "fetch", "--all", "--prune", "--quiet", "--tags"], timeout=300)
     if f.returncode != 0:
         LIMITS.append(f"git fetch failed in {local}: {f.stderr.strip()[:200]}; local data may be stale")
-    r = run(["git", "-C", local, "log", "--branches", "--remotes", "--no-merges", "--no-renames",
+    # Only the refs of remotes that point at THIS repository (a clone may carry a second remote
+    # for another project; its commits would be counted as this repository's).
+    names = matching_remotes(local, host, path)
+    allr = [x for x in run(["git", "-C", local, "remote"]).stdout.split() if x]
+    ignored = [x for x in allr if x not in names]
+    if ignored:
+        LIMITS.append(f"remotes of {local} that point at other repositories were ignored: {', '.join(ignored)}")
+    refs = ["--branches"] + [f"--glob=refs/remotes/{n}/*" for n in names]
+    r = run(["git", "-C", local, "log", *refs, "--no-merges", "--no-renames",
              f"--since={start}T00:00:00Z", f"--until={end}T23:59:59Z",
              "--format=\x1e%H\x1f%an\x1f%ae\x1f%aI\x1f%s", "--numstat"], timeout=300)
     commits = []

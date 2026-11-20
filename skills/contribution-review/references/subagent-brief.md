@@ -7,13 +7,16 @@ Source:   <repo URL>   (kind: <project|wiki>)
 Local:    <path | none>
 Person:   the authenticated account of the CLI on that host   Aliases: <aliases | none>
 Window:   <start> .. <end> inclusive, UTC
-Lenses:   <e.g. ML Engineer L1; Analytics Engineer L1; Technical Project Lead (grid: Project Tech Lead) | none>
+Lenses:   <e.g. ML & Agentic Engineer L1; Technical Project Lead L1 (rated against the legacy 2025 Project Tech Lead lines AND the 2026 Delivery & project execution + Communication lines, coverage reported for each set) | none>
+Grade:    <e.g. J2 | none>
+Context (stated by the person, not verifiable in the repository): <roles, who wrote what, AI-assistant use | none>
+Supplied files (read-only, recompute the figures you quote): <paths | none>
 Claims to test (hypotheses, not facts): <list with origin | none>
 Language: <language>
 Output:   <out_dir>/<source-slug>/   (evidence.json goes here; write report.md here)
 
 Steps
-1. Read in full: `~/.agents/skills/<adapter skill>/SKILL.md`; `~/.agents/skills/contribution-review/references/objectivity-rules.md`, `report-template.md`, `evidence-schema.md`; and, when lenses are given, `~/.agents/skills/career-badge-mapping/SKILL.md` (then the grid files it names).
+1. Read in full: `~/.agents/skills/<adapter skill>/SKILL.md`; `~/.agents/skills/contribution-review/references/objectivity-rules.md`, `report-template.md`, `evidence-schema.md`; and, when lenses are given, `~/.agents/skills/career-badge-mapping/SKILL.md` (then the 2026 grid files it names; tag every data point OUTPUT or OUTCOME with its scope).
 2. Run the adapter's preflight, then its collector with the parameters above, writing to the output directory. An `INCOMPLETE` result means: fix or report; analysing partial data is not allowed.
 3. Read the collector summary. Resolve the identity question it raises (unmatched commit authors that could be the person) and rerun with `--alias` when needed.
 4. Work through `evidence.json` with the adapter's drill-down recipes until every section of the template can be filled from evidence: all items in every role, not only items assigned to the person.
